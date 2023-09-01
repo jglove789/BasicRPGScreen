@@ -35,3 +35,8 @@ C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\obj\Deb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\obj\Debug\net6.0-windows\BasicRPGScreen.pdb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\obj\Debug\net6.0-windows\BasicRPGScreen.genruntimeconfig.cache
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\obj\Debug\net6.0-windows\ref\BasicRPGScreen.dll
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\sunnyspells.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\SignSprite.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\WoodenDoor.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Run.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Idle.xnb

@@ -1,3 +1,3 @@
 ﻿
-using var game = new BasicRPGScreen.Game1();
+using var game = new BasicRPGScreen.BasicRPGScreenGame();
 game.Run();
