@@ -30,7 +30,7 @@ namespace BasicRPGScreen
         public WoodenDoorSprite(Vector2 position)
         {
             _position = position;
-            _bounds = new BoundingRectangle(position.X + 32, position.Y + 32, 64, 64);
+            _bounds = new BoundingRectangle(position.X, position.Y, 64, 64);
         }
 
         /// <summary>
