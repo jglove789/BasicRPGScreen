@@ -8,9 +8,11 @@
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Run.png</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SignSprite.png</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/sunnyspells.spritefont</File>
+    <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/TextBox.png</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

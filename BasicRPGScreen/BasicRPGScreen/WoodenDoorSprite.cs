@@ -45,7 +45,7 @@ namespace BasicRPGScreen
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_texture, _position, null, Color.White, 0, new Vector2(), 2f, SpriteEffects.None, 0);
         }
     }
 }

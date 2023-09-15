@@ -40,3 +40,4 @@ C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Deb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\WoodenDoor.xnb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Run.xnb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Idle.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\TextBox.xnb

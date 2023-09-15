@@ -56,6 +56,18 @@
 /processorParam:TextureFormat=Compressed
 /build:sunnyspells.spritefont
 
+#begin TextBox.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextBox.png
+
 #begin WoodenDoor.png
 /importer:TextureImporter
 /processor:TextureProcessor

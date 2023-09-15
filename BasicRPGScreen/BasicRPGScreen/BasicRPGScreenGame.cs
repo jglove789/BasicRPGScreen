@@ -13,6 +13,7 @@ namespace BasicRPGScreen
         private SignSprite[] _signSprites;
         private WoodenDoorSprite _door;
         private SpriteFont _spriteFont;
+        private TextBorder _textBorder;
 
         /// <summary>
         /// A game with an RPG feel but is mostly just a title screen
@@ -29,16 +30,23 @@ namespace BasicRPGScreen
         /// </summary>
         protected override void Initialize()
         {
+            //Set the screen size
+            _graphics.IsFullScreen = false;
+            _graphics.PreferredBackBufferWidth = 1280;
+            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.ApplyChanges();
+
             // TODO: Add your initialization logic here
             _playerKnight = new PlayerKnight();
             _signSprites = new SignSprite[]
             {
-                new SignSprite(new Vector2(200, 200), "Are you ready to go on a big adventure?"),
-                new SignSprite(new Vector2(300, 200), "Well it's not ready yet."),
-                new SignSprite(new Vector2(400, 200), "So for now walk to the door."),
-                new SignSprite(new Vector2(500, 200), "Then press Space or A on the GamePad to exit.")
+                new SignSprite(new Vector2(300, 280), "Are you ready to go on a big adventure?"),
+                new SignSprite(new Vector2(500, 280), "Well it's not ready yet. There is a cool text box now though!"),
+                new SignSprite(new Vector2(700, 280), "So run on over to the door and press Space or A on the GamePad to exit."),
+                new SignSprite(new Vector2(900, 280), "Next time it WILL lead to something cool :D")
             };
-            _door = new WoodenDoorSprite(new Vector2(600, 200));
+            _door = new WoodenDoorSprite(new Vector2(1120, 280));
+            _textBorder = new TextBorder();
 
             base.Initialize();
         }
@@ -55,6 +63,7 @@ namespace BasicRPGScreen
             foreach (var sign in _signSprites) sign.LoadContent(Content);
             _door.LoadContent(Content);
             _spriteFont = Content.Load<SpriteFont>("sunnyspells");
+            _textBorder.LoadContent(Content);
         }
 
         /// <summary>
@@ -95,12 +104,16 @@ namespace BasicRPGScreen
             foreach (var sign in _signSprites)
             {
                 sign.Draw(gameTime, _spriteBatch);
-                if(sign.ReadSign) 
-                    _spriteBatch.DrawString(_spriteFont, sign.Text, new Vector2(sign.Position.X - 20, sign.Position.Y - 20), Color.Gold, 0, new Vector2(150,0), 0.5f, SpriteEffects.None, 0);
+                if(sign.ReadSign)
+                {
+                    _textBorder.Draw(_spriteBatch);
+                    _spriteBatch.DrawString(_spriteFont, sign.Text, new Vector2(275, 520), Color.Gold, 0, new Vector2(150, 0), 0.5f, SpriteEffects.None, 0);
+                }
             }
             _door.Draw(gameTime, _spriteBatch);
             _playerKnight.Draw(gameTime, _spriteBatch);
-            _spriteBatch.DrawString(_spriteFont, "Simple RPG", new Vector2(320, 50), Color.White);
+            _spriteBatch.DrawString(_spriteFont, "Simple RPG", new Vector2(480, 50), Color.White, 0, new Vector2(), 2f, SpriteEffects.None, 0);
+            _spriteBatch.DrawString(_spriteFont, "EXIT", new Vector2(1132, 260), Color.Red, 0, new Vector2(), 0.65f, SpriteEffects.None, 0);
             _spriteBatch.End();
 
             base.Draw(gameTime);

@@ -46,7 +46,7 @@ namespace BasicRPGScreen
         public SignSprite(Vector2 position, string text)
         {
             _position = position;
-            _bounds = new BoundingRectangle(position.X+16, position.Y+32, 32, 20);
+            _bounds = new BoundingRectangle(position.X+16, position.Y+32, 64, 40);
             _text = text;
         }
 
@@ -66,7 +66,7 @@ namespace BasicRPGScreen
         /// <param name="spriteBatch">The SpriteBatch to render with</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_texture, _position, null, Color.White, 0, new Vector2(), 2f, SpriteEffects.None, 0);
         }
     }
 }

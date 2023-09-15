@@ -21,8 +21,6 @@ namespace BasicRPGScreen
 
         private Texture2D textureMoving;
 
-        private double directionTimer;
-
         private double animationTimer;
 
         private short animationFrame = 0;
@@ -31,7 +29,7 @@ namespace BasicRPGScreen
 
         private bool flipped;
 
-        private BoundingRectangle bounds = new BoundingRectangle(new Vector2(100-10, 200-19), 20, 38);
+        private BoundingRectangle bounds = new BoundingRectangle(new Vector2(100 - 10, 200 - 19), 20, 38);
 
         /// <summary>
         /// The color blend with the ghost
@@ -105,17 +103,21 @@ namespace BasicRPGScreen
             }
             var source = new Rectangle(animationFrame * 120, 0, 120, 80);
             SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.A))
+            if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.A) || gamePadState.ThumbSticks.Left.X > 0)
             {
-                spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 1f, spriteEffects, 0);
+                spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
             }
-            else if (keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.D))
+            else if (keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.D) || gamePadState.ThumbSticks.Left.X < 0)
             {
-                spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 1f, spriteEffects, 0);
+                spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
+            }
+            else if (keyboardState.IsKeyDown(Keys.Up) || keyboardState.IsKeyDown(Keys.W) || keyboardState.IsKeyDown(Keys.Down) || keyboardState.IsKeyDown(Keys.S))
+            {
+                spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
             }
             else
             {
-                spriteBatch.Draw(textureIdle, position, source, Color, 0, new Vector2(64, 64), 1f, spriteEffects, 0);
+                spriteBatch.Draw(textureIdle, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
             }
         }
     }
