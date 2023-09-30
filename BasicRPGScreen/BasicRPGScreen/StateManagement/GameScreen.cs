@@ -190,4 +190,3 @@ namespace BasicRPGScreen.StateManagement
         }
     }
 }
-}

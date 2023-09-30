@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using BasicRPGScreen.Screens;
+using BasicRPGScreen.StateManagement;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -7,13 +9,14 @@ namespace BasicRPGScreen
     public class BasicRPGScreenGame : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private readonly ScreenManager _screenManager;
+        /*private SpriteBatch _spriteBatch;
 
         private PlayerKnight _playerKnight;
         private SignSprite[] _signSprites;
         private WoodenDoorSprite _door;
         private SpriteFont _spriteFont;
-        private TextBorder _textBorder;
+        private TextBorder _textBorder;*/
 
         /// <summary>
         /// A game with an RPG feel but is mostly just a title screen
@@ -23,9 +26,24 @@ namespace BasicRPGScreen
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            _screenManager = new ScreenManager(this);
+            Components.Add(_screenManager);
+
+            AddInitialScreens();
         }
 
-        /// <summary>
+        private void AddInitialScreens()
+        {
+            _screenManager.AddScreen(new MainMenuScreen(), null);
+        }
+
+        protected override void Initialize()
+        {
+            base.Initialize();
+        }
+
+        /*/// <summary>
         /// Initializes the game
         /// </summary>
         protected override void Initialize()
@@ -49,9 +67,9 @@ namespace BasicRPGScreen
             _textBorder = new TextBorder();
 
             base.Initialize();
-        }
+        }*/
 
-        /// <summary>
+        /*/// <summary>
         /// Loads content for the game
         /// </summary>
         protected override void LoadContent()
@@ -64,7 +82,9 @@ namespace BasicRPGScreen
             _door.LoadContent(Content);
             _spriteFont = Content.Load<SpriteFont>("sunnyspells");
             _textBorder.LoadContent(Content);
-        }
+        }*/
+
+        protected override void LoadContent() { }
 
         /// <summary>
         /// Updates the game world
@@ -76,7 +96,7 @@ namespace BasicRPGScreen
                 Exit();
 
             // TODO: Add your update logic here
-            _playerKnight.Update(gameTime);
+            /*_playerKnight.Update(gameTime);
 
             //Detect and process collisions
             foreach(var sign in _signSprites)
@@ -86,7 +106,7 @@ namespace BasicRPGScreen
             }
             if(_door.Bounds.CollidesWith(_playerKnight.Bounds))
                 if(Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
-                    base.Exit();
+                    base.Exit();*/
 
             base.Update(gameTime);
         }
@@ -98,6 +118,8 @@ namespace BasicRPGScreen
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.ForestGreen);
+            base.Draw(gameTime);
+            /*GraphicsDevice.Clear(Color.ForestGreen);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
@@ -116,7 +138,7 @@ namespace BasicRPGScreen
             _spriteBatch.DrawString(_spriteFont, "EXIT", new Vector2(1132, 260), Color.Red, 0, new Vector2(), 0.65f, SpriteEffects.None, 0);
             _spriteBatch.End();
 
-            base.Draw(gameTime);
+            base.Draw(gameTime);*/
         }
     }
 }

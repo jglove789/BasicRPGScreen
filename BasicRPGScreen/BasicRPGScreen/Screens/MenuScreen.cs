@@ -7,6 +7,7 @@ using BasicRPGScreen.StateManagement;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace BasicRPGScreen.Screens
 {
@@ -15,6 +16,8 @@ namespace BasicRPGScreen.Screens
         private readonly List<MenuEntry> _menuEntries = new List<MenuEntry>();
         private int _selectedEntry;
         private readonly string _menuTitle;
+        private SoundEffect _menuMoving;
+        private SoundEffect _menuItemSelected;
 
         private readonly InputAction _menuUp;
         private readonly InputAction _menuDown;
@@ -30,6 +33,8 @@ namespace BasicRPGScreen.Screens
 
             TransitionOnTime = TimeSpan.FromSeconds(0.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
+
+            _menuMoving = ScreenManager.MenuMoving;
 
             _menuUp = new InputAction(
                 new[] { Buttons.DPadUp, Buttons.LeftThumbstickUp },
@@ -58,6 +63,7 @@ namespace BasicRPGScreen.Screens
             if (_menuUp.Occurred(input, ControllingPlayer, out playerIndex))
             {
                 _selectedEntry--;
+                _menuMoving.Play();
 
                 if (_selectedEntry < 0)
                     _selectedEntry = _menuEntries.Count - 1;
@@ -66,13 +72,17 @@ namespace BasicRPGScreen.Screens
             if (_menuDown.Occurred(input, ControllingPlayer, out playerIndex))
             {
                 _selectedEntry++;
+                _menuMoving.Play();
 
                 if (_selectedEntry >= _menuEntries.Count)
                     _selectedEntry = 0;
             }
 
             if (_menuSelect.Occurred(input, ControllingPlayer, out playerIndex))
+            {
                 OnSelectEntry(_selectedEntry, playerIndex);
+                _menuItemSelected.Play();
+            }
             else if (_menuCancel.Occurred(input, ControllingPlayer, out playerIndex))
                 OnCancel(playerIndex);
         }
