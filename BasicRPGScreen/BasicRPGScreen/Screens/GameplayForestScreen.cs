@@ -19,7 +19,6 @@ namespace BasicRPGScreen.Screens
     public class GameplayForestScreen : GameScreen
     {
         private ContentManager _content;
-        private SpriteFont _gameFont;
 
         private PlayerKnight _playerKnight;
         private SignSprite[] _signSprites;
@@ -33,6 +32,9 @@ namespace BasicRPGScreen.Screens
 
         public GameplayForestScreen()
         {
+            TransitionOnTime = TimeSpan.FromSeconds(1.5);
+            TransitionOffTime = TimeSpan.FromSeconds(0.5);
+
             _pauseAction = new InputAction(
                 new[] { Buttons.Start, Buttons.Back },
                 new[] { Keys.Back, Keys.Escape }, true);
@@ -60,14 +62,15 @@ namespace BasicRPGScreen.Screens
             if (_content == null)
                 _content = new ContentManager(ScreenManager.Game.Services, "Content");
 
-            _gameFont = _content.Load<SpriteFont>("sunnyspells");
+            _spriteFont = _content.Load<SpriteFont>("sunnyspells");
 
             _playerKnight.LoadContent(_content);
             foreach (var sign in _signSprites) sign.LoadContent(_content);
             _door.LoadContent(_content);
             _textBorder.LoadContent(_content);
-            backgroundMusic = ScreenManager.GameMusic;
+            backgroundMusic = _content.Load<Song>("LevelMusic2");
             MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume = 0.1f;
             MediaPlayer.Play(backgroundMusic);
 
             Thread.Sleep(1000);
@@ -87,7 +90,7 @@ namespace BasicRPGScreen.Screens
 
         public override void Update(GameTime gameTime, bool otherScreenHasFocus, bool coveredByOtherScreen)
         {
-            base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
+            base.Update(gameTime, otherScreenHasFocus, false);
 
             // Gradually fade in or out depending on whether we are covered by the pause screen.
             if (coveredByOtherScreen)
@@ -157,7 +160,12 @@ namespace BasicRPGScreen.Screens
             _spriteBatch.DrawString(_spriteFont, "EXIT", new Vector2(1132, 260), Color.Red, 0, new Vector2(), 0.65f, SpriteEffects.None, 0);
             _spriteBatch.End();
 
-            base.Draw(gameTime);
+            if (TransitionPosition > 0 || _pauseAlpha > 0)
+            {
+                float alpha = MathHelper.Lerp(1f - TransitionAlpha, 1f, _pauseAlpha / 2);
+
+                ScreenManager.FadeBackBufferToBlack(alpha);
+            }
         }
     }
 }

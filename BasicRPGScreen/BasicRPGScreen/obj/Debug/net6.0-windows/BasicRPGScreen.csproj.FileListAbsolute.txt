@@ -41,3 +41,9 @@ C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Deb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Run.xnb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Idle.xnb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\TextBox.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\blank.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\gradient.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\LevelMusic2.wma
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\LevelMusic2.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\MenuItemSelectSound.xnb
+C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\MenuMoving.xnb

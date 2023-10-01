@@ -6,7 +6,9 @@
   <SourceFiles>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Idle.png</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Run.png</File>
+    <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/blank.png</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/gradient.png</File>
+    <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/LevelMusic2.mp3</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuItemSelectSound.wav</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuMoving.wav</File>
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SignSprite.png</File>
@@ -15,6 +17,8 @@
     <File>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

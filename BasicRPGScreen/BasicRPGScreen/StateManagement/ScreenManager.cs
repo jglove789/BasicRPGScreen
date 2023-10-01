@@ -41,8 +41,6 @@ namespace BasicRPGScreen.StateManagement
         /// </summary>
         public Texture2D BlankTexture { get; private set; }
 
-        public SoundEffect MenuMoving { get; private set; }
-        public SoundEffect MenuItemSelected { get; private set; }
         public Song GameMusic { get; private set; }
 
         /// <summary>
@@ -61,6 +59,7 @@ namespace BasicRPGScreen.StateManagement
         {
             base.Initialize();
             _isInitialized = true;
+            GameMusic = _content.Load<Song>("LevelMusic2");
         }
 
         /// <summary>
@@ -70,10 +69,7 @@ namespace BasicRPGScreen.StateManagement
         {
             SpriteBatch = new SpriteBatch(GraphicsDevice);
             Font = _content.Load<SpriteFont>("sunnyspells");
-            //BlankTexture = _content.Load<Texture2D>("blank");
-            MenuMoving = _content.Load<SoundEffect>("MenuMoving");
-            MenuItemSelected = _content.Load<SoundEffect>("MenuItemSelectSound");
-            GameMusic = _content.Load<Song>("GameMusic");
+            BlankTexture = _content.Load<Texture2D>("blank");
 
             // Tell each of the screens to load thier content 
             foreach (var screen in _screens)

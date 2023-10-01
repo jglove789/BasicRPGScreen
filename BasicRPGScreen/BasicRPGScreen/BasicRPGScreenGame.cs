@@ -27,6 +27,12 @@ namespace BasicRPGScreen
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
+            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.PreferredBackBufferWidth = 1280;
+
+            var screenFactory = new ScreenFactory();
+            Services.AddService(typeof(IScreenFactory), screenFactory);
+
             _screenManager = new ScreenManager(this);
             Components.Add(_screenManager);
 

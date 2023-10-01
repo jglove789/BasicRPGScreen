@@ -1,3 +1,15 @@
 ﻿
-using var game = new BasicRPGScreen.BasicRPGScreenGame();
-game.Run();
+using System;
+
+namespace BasicRPGScreen
+{
+    public static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            using (var game = new BasicRPGScreenGame())
+                game.Run();
+        }
+    }
+}

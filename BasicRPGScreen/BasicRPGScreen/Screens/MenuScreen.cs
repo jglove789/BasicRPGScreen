@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 
 namespace BasicRPGScreen.Screens
 {
@@ -18,6 +19,7 @@ namespace BasicRPGScreen.Screens
         private readonly string _menuTitle;
         private SoundEffect _menuMoving;
         private SoundEffect _menuItemSelected;
+        private ContentManager _content;
 
         private readonly InputAction _menuUp;
         private readonly InputAction _menuDown;
@@ -34,8 +36,6 @@ namespace BasicRPGScreen.Screens
             TransitionOnTime = TimeSpan.FromSeconds(0.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
 
-            _menuMoving = ScreenManager.MenuMoving;
-
             _menuUp = new InputAction(
                 new[] { Buttons.DPadUp, Buttons.LeftThumbstickUp },
                 new[] { Keys.Up }, true);
@@ -48,6 +48,15 @@ namespace BasicRPGScreen.Screens
             _menuCancel = new InputAction(
                 new[] { Buttons.B, Buttons.Back },
                 new[] { Keys.Back, Keys.Escape }, true);
+        }
+
+        public override void Activate()
+        {
+            if (_content == null)
+                _content = new ContentManager(ScreenManager.Game.Services, "Content");
+
+            _menuMoving = _content.Load<SoundEffect>("MenuMoving");
+            _menuItemSelected = _content.Load<SoundEffect>("MenuItemSelectSound");
         }
 
         // Responds to user input, changing the selected entry and accepting or cancelling the menu.
