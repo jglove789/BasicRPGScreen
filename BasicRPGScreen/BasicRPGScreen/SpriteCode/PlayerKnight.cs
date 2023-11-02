@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicRPGScreen
+namespace BasicRPGScreen.SpriteCode
 {
     public class PlayerKnight
     {
@@ -102,7 +102,7 @@ namespace BasicRPGScreen
                 animationTimer -= 0.1;
             }
             var source = new Rectangle(animationFrame * 120, 0, 120, 80);
-            SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+            SpriteEffects spriteEffects = flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.A) || gamePadState.ThumbSticks.Left.X > 0)
             {
                 spriteBatch.Draw(textureMoving, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);

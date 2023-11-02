@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicRPGScreen
+namespace BasicRPGScreen.SpriteCode
 {
     public class TextBorder
     {

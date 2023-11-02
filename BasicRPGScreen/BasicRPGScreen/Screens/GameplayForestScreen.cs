@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework;
 using SharpDX.Direct2D1;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Media;
+using BasicRPGScreen.SpriteCode;
 //using System.Drawing;
 
 namespace BasicRPGScreen.Screens

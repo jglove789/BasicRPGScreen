@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Media;
+using System.Text.Json;
+using System.Diagnostics;
+using System.IO;
 
 namespace BasicRPGScreen.StateManagement
 {
@@ -25,6 +28,8 @@ namespace BasicRPGScreen.StateManagement
         private readonly InputState _input = new InputState();
 
         private bool _isInitialized;
+        private PlayerStats _pStats;
+        private const string PATH = "stats.json";
 
         /// <summary>
         /// A SpriteBatch shared by all GameScreens
@@ -67,6 +72,11 @@ namespace BasicRPGScreen.StateManagement
         /// </summary>
         protected override void LoadContent()
         {
+            _pStats = new PlayerStats()
+            {
+                Name = "Knight"
+            };
+            Save(_pStats);
             SpriteBatch = new SpriteBatch(GraphicsDevice);
             Font = _content.Load<SpriteFont>("sunnyspells");
             BlankTexture = _content.Load<Texture2D>("blank");
@@ -194,6 +204,19 @@ namespace BasicRPGScreen.StateManagement
         public bool Activate()
         {
             return false;
+        }
+
+        private void Save(PlayerStats stats)
+        {
+            string seriealizedText = JsonSerializer.Serialize<PlayerStats>(stats);
+            Trace.WriteLine(seriealizedText);
+            File.WriteAllText(PATH, seriealizedText);
+        }
+
+        private PlayerStats Load()
+        {
+            var fileContents = File.ReadAllText(PATH);
+            return JsonSerializer.Deserialize<PlayerStats>(fileContents);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using BasicRPGScreen.Collisions;
 using Microsoft.Xna.Framework.Content;
 
-namespace BasicRPGScreen
+namespace BasicRPGScreen.SpriteCode
 {
     public class WoodenDoorSprite
     {

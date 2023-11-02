@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using BasicRPGScreen.Collisions;
 using Microsoft.Xna.Framework.Content;
 
-namespace BasicRPGScreen
+namespace BasicRPGScreen.SpriteCode
 {
     public class SignSprite
     {
@@ -46,7 +46,7 @@ namespace BasicRPGScreen
         public SignSprite(Vector2 position, string text)
         {
             _position = position;
-            _bounds = new BoundingRectangle(position.X+16, position.Y+32, 64, 40);
+            _bounds = new BoundingRectangle(position.X + 16, position.Y + 32, 64, 40);
             _text = text;
         }
 
