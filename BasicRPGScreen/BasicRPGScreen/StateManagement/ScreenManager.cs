@@ -76,7 +76,9 @@ namespace BasicRPGScreen.StateManagement
             {
                 Name = "Knight"
             };
-            Save(_pStats);
+            //Save(_pStats);
+            _pStats = Load();
+            Trace.WriteLine($"{_pStats.Name}");
             SpriteBatch = new SpriteBatch(GraphicsDevice);
             Font = _content.Load<SpriteFont>("sunnyspells");
             BlankTexture = _content.Load<Texture2D>("blank");
