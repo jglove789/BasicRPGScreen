@@ -13,6 +13,7 @@ using SharpDX.Direct2D1;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Media;
 using BasicRPGScreen.SpriteCode;
+using System.Runtime.CompilerServices;
 //using System.Drawing;
 
 namespace BasicRPGScreen.Screens
@@ -27,6 +28,7 @@ namespace BasicRPGScreen.Screens
         private SpriteFont _spriteFont;
         private TextBorder _textBorder;
         private Song backgroundMusic;
+        private Tilemap _tilemap;
 
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
@@ -73,6 +75,7 @@ namespace BasicRPGScreen.Screens
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Volume = 0.1f;
             MediaPlayer.Play(backgroundMusic);
+            _tilemap = _content.Load<Tilemap>("FirstLevel");
 
             Thread.Sleep(1000);
 
@@ -146,6 +149,7 @@ namespace BasicRPGScreen.Screens
             var _spriteBatch = ScreenManager.SpriteBatch;
 
             _spriteBatch.Begin();
+            _tilemap.Draw(gameTime, _spriteBatch);
             foreach (var sign in _signSprites)
             {
                 sign.Draw(gameTime, _spriteBatch);

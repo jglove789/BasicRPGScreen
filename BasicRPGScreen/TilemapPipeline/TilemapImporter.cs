@@ -1,9 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework.Content.Pipeline;
-using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
-
-using TImport = System.String;
 
 namespace TilemapPipeline
 {
@@ -12,8 +9,8 @@ namespace TilemapPipeline
     /// from a file into a content object; any processing of that data occurs in the subsequent content
     /// processor step. 
     /// </summary>
-    [ContentImporter(".tmap", DisplayName = "BasicTilemapImporter", DefaultProcessor = "BasicTilemapProcessor")]
-    public class BasicTilemapImporter : ContentImporter<TilemapContent>
+    [ContentImporter(".txt", DisplayName = "TilemapImporter", DefaultProcessor = "TilemapProcessor")]
+    public class TilemapImporter : ContentImporter<TilemapContent>
     {
         public override TilemapContent Import(string filename, ContentImporterContext context)
         {

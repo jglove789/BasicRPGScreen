@@ -1,12 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Content.Pipeline;
-﻿using TilemapPipeline;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
-using Microsoft.Xna.Framework.Content.Pipeline.Processors;
-
-using TInput = System.String;
-using TOutput = System.String;
 
 namespace TilemapPipeline
 {
@@ -14,8 +8,8 @@ namespace TilemapPipeline
     /// Processes a BasicTilemapContent object, building and linking the associated texture 
     /// and setting up the tile information.
     /// </summary>
-    [ContentProcessor(DisplayName = "BasicTilemapProcessor")]
-    public class BasicTilemapProcessor : ContentProcessor<TilemapContent, TilemapContent>
+    [ContentProcessor(DisplayName = "TilemapProcessor")]
+    public class TilemapProcessor : ContentProcessor<TilemapContent, TilemapContent>
     {
         /// <summary>
         /// A scaling parameter to make the tilemap bigger

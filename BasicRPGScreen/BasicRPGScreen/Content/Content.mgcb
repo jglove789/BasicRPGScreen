@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\TilemapPipeline\bin\Debug\net6.0\TilemapPipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -48,6 +49,24 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:blank.png
+
+#begin FieldsTileset.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:FieldsTileset.png
+
+#begin FirstLevel.txt
+/importer:TilemapImporter
+/processor:TilemapProcessor
+/processorParam:Scale=1
+/build:FirstLevel.txt
 
 #begin gradient.png
 /importer:TextureImporter
