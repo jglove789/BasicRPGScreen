@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuItemSelectSound.wav</SourceFile>
-  <SourceTime>2023-09-29T15:34:43.0001191-05:00</SourceTime>
-  <DestFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/MenuItemSelectSound.xnb</DestFile>
-  <DestTime>2023-09-29T21:11:23.8524273-05:00</DestTime>
+  <SourceFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuItemSelectSound.wav</SourceFile>
+  <SourceTime>2023-12-07T17:36:14.2347403-06:00</SourceTime>
+  <DestFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/MenuItemSelectSound.xnb</DestFile>
+  <DestTime>2023-12-07T17:37:21.6862959-06:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

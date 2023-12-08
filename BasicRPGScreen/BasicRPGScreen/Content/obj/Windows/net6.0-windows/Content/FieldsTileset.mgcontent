@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FieldsTileset.png</SourceFile>
-  <SourceTime>2023-11-10T15:48:35.5468811-06:00</SourceTime>
-  <DestFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/FieldsTileset.xnb</DestFile>
-  <DestTime>2023-11-10T16:09:11.3662713-06:00</DestTime>
+  <SourceFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FieldsTileset.png</SourceFile>
+  <SourceTime>2023-12-07T17:36:14.2196517-06:00</SourceTime>
+  <DestFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/FieldsTileset.xnb</DestFile>
+  <DestTime>2023-12-07T17:37:21.0903293-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

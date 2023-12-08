@@ -208,6 +208,11 @@ namespace BasicRPGScreen.StateManagement
             return false;
         }
 
+        public void SaveGame()
+        {
+            Save(_pStats);
+        }
+
         private void Save(PlayerStats stats)
         {
             string seriealizedText = JsonSerializer.Serialize<PlayerStats>(stats);

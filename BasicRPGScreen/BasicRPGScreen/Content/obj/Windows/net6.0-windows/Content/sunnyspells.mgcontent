@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/sunnyspells.spritefont</SourceFile>
-  <SourceTime>2023-09-01T14:12:34.1118087-05:00</SourceTime>
-  <DestFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/sunnyspells.xnb</DestFile>
-  <DestTime>2023-09-01T14:12:39.6677771-05:00</DestTime>
+  <SourceFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/sunnyspells.spritefont</SourceFile>
+  <SourceTime>2023-12-07T17:36:14.297281-06:00</SourceTime>
+  <DestFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/sunnyspells.xnb</DestFile>
+  <DestTime>2023-12-07T17:37:21.8454289-06:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

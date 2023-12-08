@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L9plvuJT6PCjYl0BtMwNjdr5RaYA+tgkyh5qxCdFOhQSCdRK21rAfVs80nuRK5zpA7qPAZHBXyOBVGG4dcmCRw==",
+  "dgSpecHash": "i03l6/7l5NhHIPAULz617kcewHl7fnAsQckEJR991N0K4LDKDz3F7vahYt3c1OpBrXn/ckYOLlHE4d8ICasjmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
+  "projectFilePath": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bearf\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\bearf\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

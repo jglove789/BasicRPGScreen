@@ -7532,11 +7532,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
+      "projectUniqueName": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
       "projectName": "BasicRPGScreen",
-      "projectPath": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
+      "projectPath": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen.csproj",
       "packagesPath": "C:\\Users\\bearf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\obj\\",
+      "outputPath": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\BasicRPGScreen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bearf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7593,7 +7593,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

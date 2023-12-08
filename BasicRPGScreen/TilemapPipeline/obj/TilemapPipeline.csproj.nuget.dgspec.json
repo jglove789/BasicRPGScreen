@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj": {}
+    "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj": {
+    "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj",
+        "projectUniqueName": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj",
         "projectName": "TilemapPipeline",
-        "projectPath": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj",
+        "projectPath": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\TilemapPipeline.csproj",
         "packagesPath": "C:\\Users\\bearf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bearf\\source\\repos\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\obj\\",
+        "outputPath": "C:\\Users\\bearf\\Documents\\GitHub\\BasicRPGScreen\\BasicRPGScreen\\TilemapPipeline\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bearf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

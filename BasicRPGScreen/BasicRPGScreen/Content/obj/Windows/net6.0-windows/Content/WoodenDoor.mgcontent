@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</SourceFile>
-  <SourceTime>2023-09-01T11:06:28.187921-05:00</SourceTime>
-  <DestFile>C:/Users/bearf/source/repos/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/WoodenDoor.xnb</DestFile>
-  <DestTime>2023-09-01T15:10:26.891073-05:00</DestTime>
+  <SourceFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</SourceFile>
+  <SourceTime>2023-12-07T17:36:14.2367402-06:00</SourceTime>
+  <DestFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/WoodenDoor.xnb</DestFile>
+  <DestTime>2023-12-07T17:37:21.8880789-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
