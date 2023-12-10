@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/BattleScreen.txt</SourceFile>
+  <SourceTime>2023-12-10T13:06:51.6769849-06:00</SourceTime>
+  <DestFile>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/bin/Windows/Content/BattleScreen.xnb</DestFile>
+  <DestTime>2023-12-10T13:07:43.3485466-06:00</DestTime>
+  <Importer>TilemapImporter</Importer>
+  <ImporterTime>2023-12-07T17:36:14.4454578-06:00</ImporterTime>
+  <Processor>TilemapProcessor</Processor>
+  <ProcessorTime>2023-12-07T17:36:14.4454578-06:00</ProcessorTime>
+  <Parameters>
+    <Key>Scale</Key>
+    <Value>1</Value>
+  </Parameters>
+  <Dependencies>
+    <string>FieldsTileset.png</string>
+  </Dependencies>
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

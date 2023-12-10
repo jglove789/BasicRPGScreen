@@ -104,3 +104,4 @@ C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\obj
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\SecondLevel.xnb
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\FinalLevel.xnb
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\ThirdLevel.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\BattleScreen.xnb
