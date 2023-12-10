@@ -62,6 +62,12 @@
 /processorParam:TextureFormat=Color
 /build:FieldsTileset.png
 
+#begin FinalLevel.txt
+/importer:TilemapImporter
+/processor:TilemapProcessor
+/processorParam:Scale=1
+/build:FinalLevel.txt
+
 #begin FirstLevel.txt
 /importer:TilemapImporter
 /processor:TilemapProcessor
@@ -98,6 +104,12 @@
 /processorParam:Quality=Best
 /build:MenuMoving.wav
 
+#begin SecondLevel.txt
+/importer:TilemapImporter
+/processor:TilemapProcessor
+/processorParam:Scale=1
+/build:SecondLevel.txt
+
 #begin SignSprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -128,6 +140,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextBox.png
+
+#begin ThirdLevel.txt
+/importer:TilemapImporter
+/processor:TilemapProcessor
+/processorParam:Scale=1
+/build:ThirdLevel.txt
 
 #begin WoodenDoor.png
 /importer:TextureImporter

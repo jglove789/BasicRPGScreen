@@ -8,17 +8,23 @@
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Run.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/blank.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FieldsTileset.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FinalLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FirstLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/gradient.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/LevelMusic2.mp3</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuItemSelectSound.wav</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuMoving.wav</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SecondLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SignSprite.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/sunnyspells.spritefont</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/TextBox.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/ThirdLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

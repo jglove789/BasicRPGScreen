@@ -61,21 +61,21 @@ namespace BasicRPGScreen.SpriteCode
             keyboardState = Keyboard.GetState();
 
             // Apply the gamepad movement with inverted Y axis
-            position += gamePadState.ThumbSticks.Left * new Vector2(2, -2);
+            position += gamePadState.ThumbSticks.Left * new Vector2(3, -3);
             if (gamePadState.ThumbSticks.Left.X < 0) flipped = true;
             if (gamePadState.ThumbSticks.Left.X > 0) flipped = false;
 
             // Apply keyboard movement
-            if (keyboardState.IsKeyDown(Keys.Up) || keyboardState.IsKeyDown(Keys.W)) position += new Vector2(0, -2);
-            if (keyboardState.IsKeyDown(Keys.Down) || keyboardState.IsKeyDown(Keys.S)) position += new Vector2(0, 2);
+            if (keyboardState.IsKeyDown(Keys.Up) || keyboardState.IsKeyDown(Keys.W)) position += new Vector2(0, -3);
+            if (keyboardState.IsKeyDown(Keys.Down) || keyboardState.IsKeyDown(Keys.S)) position += new Vector2(0, 3);
             if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.A))
             {
-                position += new Vector2(-2, 0);
+                position += new Vector2(-3, 0);
                 flipped = true;
             }
             if (keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.D))
             {
-                position += new Vector2(2, 0);
+                position += new Vector2(3, 0);
                 flipped = false;
             }
 
