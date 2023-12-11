@@ -27,6 +27,13 @@ namespace BasicRPGScreen.Screens
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
 
+        //Who's turn is it?
+        private int _activeEntity;
+        private int _turnCount;
+        private bool _animationPlaying = false;
+        private bool _battleOver = false;
+        private bool _battleWonOrLost = true;
+
         public BattleScreen()
         {
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
@@ -38,6 +45,7 @@ namespace BasicRPGScreen.Screens
 
             _playerKnight = new PlayerKnight();
             _textBorder = new TextBorder();
+            _turnCount = 1;
         }
 
         public override void Activate()
@@ -80,10 +88,42 @@ namespace BasicRPGScreen.Screens
             else
                 _pauseAlpha = Math.Max(_pauseAlpha - 1f / 32, 0);
 
-            if (IsActive)
+            if(_activeEntity == 0) //Player turn
+            {
+                if(Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                {
+                    //Attack enemy
+                    _activeEntity = 1;
+                }
+                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                {
+                    //Attack enemy with special
+                    _activeEntity = 1;
+                }
+                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                {
+                    //Block
+                    _activeEntity = 1;
+                }
+                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                {
+                    //Use healing charge
+                    _activeEntity = 1;
+                }
+            }
+            else //Enemy turn
+            {
+                //Always attacks player
+                _activeEntity = 0;
+                _turnCount++;
+                _animationPlaying = true;
+            }
+
+            //Not sure if this statement will be necessary during combat
+            /*if (IsActive)
             {
                 _playerKnight.Update(gameTime);
-            }
+            }*/
         }
 
         public override void HandleInput(GameTime gameTime, InputState input)
@@ -103,11 +143,11 @@ namespace BasicRPGScreen.Screens
             // on PC if they are playing with a keyboard and have no gamepad at all!
             bool gamePadDisconnected = !gamePadState.IsConnected && input.GamePadWasConnected[playerIndex];
 
-            PlayerIndex player;
+            /*PlayerIndex player;
             if (_pauseAction.Occurred(input, ControllingPlayer, out player) || gamePadDisconnected)
             {
                 ScreenManager.AddScreen(new PauseMenuScreen(), ControllingPlayer);
-            }
+            }*/
         }
 
         public override void Draw(GameTime gameTime)

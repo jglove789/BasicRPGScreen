@@ -23,7 +23,7 @@ namespace BasicRPGScreen.SpriteCode
 
         private double animationTimer;
 
-        private short animationFrame = 0;
+        public short animationFrame = 0;
 
         private Vector2 position = new Vector2(100, 200);
 

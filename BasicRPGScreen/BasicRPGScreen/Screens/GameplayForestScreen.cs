@@ -114,7 +114,7 @@ namespace BasicRPGScreen.Screens
                 }
                 if (_door.Bounds.CollidesWith(_playerKnight.Bounds))
                     if (Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
-                        ScreenManager.AddScreen(new BattleScreen(), ControllingPlayer);
+                        ScreenManager.AddScreen(new FirstEncounterGameplayScreen(), ControllingPlayer);
             }
         }
 
