@@ -26,11 +26,14 @@ namespace BasicRPGScreen.Screens
         private TextBorder _textBorder;
         private Song backgroundMusic;
         private Tilemap _tilemap;
+        private FieldBoss _boss;
+        private List<Enemy> _enemyList = new List<Enemy>();
+        private bool _isBossAlive = true;
 
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
 
-        public FinalEncounterGameplayScreen()
+        public FinalEncounterGameplayScreen(bool bossAlive)
         {
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
@@ -46,6 +49,9 @@ namespace BasicRPGScreen.Screens
             };
             _door = new WoodenDoorSprite(new Vector2(1120, 280));
             _textBorder = new TextBorder();
+            _boss = new FieldBoss(new Vector2(620, 340));
+            _enemyList.Add(_boss);
+            _isBossAlive = bossAlive;
         }
 
         public override void Activate()
@@ -64,6 +70,7 @@ namespace BasicRPGScreen.Screens
             MediaPlayer.Volume = 0.1f;
             MediaPlayer.Play(backgroundMusic);
             _tilemap = _content.Load<Tilemap>("FinalLevel");
+            _boss.LoadContent(_content);
 
             //Thread.Sleep(500);
 
@@ -103,6 +110,7 @@ namespace BasicRPGScreen.Screens
                 if (_door.Bounds.CollidesWith(_playerKnight.Bounds))
                     if (Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
                         ScreenManager.Game.Exit();
+                if (_isBossAlive) if (_boss.Bounds.CollidesWith(_playerKnight.Bounds)) ScreenManager.AddScreen(new BattleScreen(_enemyList, 1), ControllingPlayer);
             }
         }
 
@@ -149,6 +157,7 @@ namespace BasicRPGScreen.Screens
             }
             _door.Draw(gameTime, _spriteBatch);
             _playerKnight.Draw(gameTime, _spriteBatch);
+            if (_isBossAlive) _boss.Draw(gameTime, _spriteBatch, 0, new Vector2(620, 340));
             _spriteBatch.End();
 
             if (TransitionPosition > 0 || _pauseAlpha > 0)

@@ -14,20 +14,23 @@ namespace BasicRPGScreen.SpriteCode
     public class Goblin : Enemy
     {
         private Texture2D textureIdle;
+        private int idleFrames = 1;
 
         private Texture2D textureAttack;
+        private int attackFrames = 6;
 
         private Texture2D textureDeath;
+        private int deathFrames = 6;
 
         private double animationTimer;
 
         public short animationFrame = 0;
 
-        private Vector2 position = new Vector2(100, 200);
+        private Vector2 position;
 
         private bool flipped;
 
-        private BoundingRectangle bounds = new BoundingRectangle(new Vector2(100 - 10, 200 - 19), 20, 38);
+        private BoundingRectangle bounds;
 
         /// <summary>
         /// The color blend with the ghost
@@ -38,6 +41,18 @@ namespace BasicRPGScreen.SpriteCode
         /// The bounding volume of the sprite
         /// </summary>
         public BoundingRectangle Bounds => bounds;
+
+        public (Texture2D, int) ActiveTexure { get; set; }
+
+        public Goblin(Vector2 location)
+        {
+            MaxHP = 25;
+            CurrentHP = MaxHP;
+            Damage = 7;
+
+            position = location;
+            bounds = new BoundingRectangle(location, 24, 24);
+        }
 
         /// <summary>
         /// Loads the sprite texture using the provided ContentManager
@@ -64,8 +79,14 @@ namespace BasicRPGScreen.SpriteCode
         /// </summary>
         /// <param name="gameTime">The game time</param>
         /// <param name="spriteBatch">The spritebatch to render with</param>
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation, Vector2 location)
         {
+            if (animation == 0) ActiveTexure = (textureIdle, idleFrames);
+            else if (animation == 1) ActiveTexure = (textureAttack, attackFrames);
+            else ActiveTexure = (textureDeath, deathFrames);
+
+            position = location;
+            bounds = new BoundingRectangle(location, 24, 24);
             //Update animation timer
             animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -73,12 +94,12 @@ namespace BasicRPGScreen.SpriteCode
             if (animationTimer > 0.1)
             {
                 animationFrame++;
-                if (animationFrame > 8) animationFrame = 0;
+                if (animationFrame > ActiveTexure.Item2) animationFrame = 0;
                 animationTimer -= 0.1;
             }
-            var source = new Rectangle(animationFrame * 120, 0, 120, 80);
+            var source = new Rectangle(animationFrame * 48, 0, 48, 48);
             SpriteEffects spriteEffects = flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            spriteBatch.Draw(textureIdle, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
+            spriteBatch.Draw(ActiveTexure.Item1, position, source, Color, 0, new Vector2(24, 24), 2f, spriteEffects, 0);
         }
     }
 }

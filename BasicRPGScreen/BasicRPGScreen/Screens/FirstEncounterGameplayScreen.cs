@@ -44,11 +44,12 @@ namespace BasicRPGScreen.Screens
             _playerKnight = new PlayerKnight();
             _signSprites = new SignSprite[]
             {
-
+                new SignSprite(new Vector2(300, 280), "Run into the enemy to begin combat!"),
+                new SignSprite(new Vector2(400, 280), "When it's your turn, commands will pop up. Click the corresponding button to do that action."),
             };
-            _door = new WoodenDoorSprite(new Vector2(1120, 280));
+            _door = new WoodenDoorSprite(new Vector2(1120, 540));
             _textBorder = new TextBorder();
-            _wolf = new Wolf();
+            _wolf = new Wolf(new Vector2(1080, 560));
             _enemyList.Add(_wolf);
             _isWolfAlive = wolfAlive;
         }
@@ -108,7 +109,7 @@ namespace BasicRPGScreen.Screens
                 }
                 if (_door.Bounds.CollidesWith(_playerKnight.Bounds))
                     if (Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
-                        ScreenManager.AddScreen(new SecondEncounterGameplayScreen(), ControllingPlayer);
+                        ScreenManager.AddScreen(new SecondEncounterGameplayScreen(true), ControllingPlayer);
                 if(_isWolfAlive) if (_wolf.Bounds.CollidesWith(_playerKnight.Bounds)) ScreenManager.AddScreen(new BattleScreen(_enemyList, 1), ControllingPlayer);
             }
         }
@@ -156,7 +157,7 @@ namespace BasicRPGScreen.Screens
             }
             _door.Draw(gameTime, _spriteBatch);
             _playerKnight.Draw(gameTime, _spriteBatch);
-            if(_isWolfAlive) _wolf.Draw(gameTime, _spriteBatch, 0);
+            if(_isWolfAlive) _wolf.Draw(gameTime, _spriteBatch, 0 , new Vector2(1080, 560));
             _spriteBatch.End();
 
             if (TransitionPosition > 0 || _pauseAlpha > 0)

@@ -54,9 +54,8 @@ namespace BasicRPGScreen.Screens
             _signSprites = new SignSprite[]
             {
                 new SignSprite(new Vector2(300, 280), "Are you ready to go on a big adventure?"),
-                new SignSprite(new Vector2(500, 280), "Well it's not ready yet. There is a cool text box now though!"),
-                new SignSprite(new Vector2(700, 280), "So run on over to the door and press Space or A on the GamePad to exit."),
-                new SignSprite(new Vector2(900, 280), "Next time it WILL lead to something cool :D")
+                new SignSprite(new Vector2(500, 280), "Well it's finally ready! Mostly..."),
+                new SignSprite(new Vector2(700, 280), "Just run on over to the door and press Space or A on the GamePad to begin.")
             };
             _door = new WoodenDoorSprite(new Vector2(1120, 280));
             _textBorder = new TextBorder();

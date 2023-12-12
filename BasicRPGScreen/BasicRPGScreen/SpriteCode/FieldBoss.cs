@@ -7,11 +7,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
 namespace BasicRPGScreen.SpriteCode
 {
-    public class Wolf : Enemy
+    public class FieldBoss : Enemy
     {
         private Texture2D textureIdle;
         private int idleFrames = 1;
@@ -44,14 +43,14 @@ namespace BasicRPGScreen.SpriteCode
 
         public (Texture2D, int) ActiveTexure { get; set; }
 
-        public Wolf(Vector2 location)
+        public FieldBoss(Vector2 location)
         {
-            MaxHP = 12;
+            MaxHP = 50;
             CurrentHP = MaxHP;
-            Damage = 5;
+            Damage = 10;
 
             position = location;
-            bounds = new BoundingRectangle(location, 24, 24);
+            bounds = new BoundingRectangle(location, 96, 96);
         }
 
         /// <summary>
@@ -60,9 +59,9 @@ namespace BasicRPGScreen.SpriteCode
         /// <param name="content">The ContentManager to load with</param>
         public void LoadContent(ContentManager content)
         {
-            textureIdle = content.Load<Texture2D>("S_Death_Wolf");
-            textureAttack = content.Load<Texture2D>("S_Attack_Wolf");
-            textureDeath = content.Load<Texture2D>("S_Death_Wolf");
+            textureIdle = content.Load<Texture2D>("Idle_Boss");
+            textureAttack = content.Load<Texture2D>("Attack1_Boss");
+            textureDeath = content.Load<Texture2D>("Death_Boss");
         }
 
         /// <summary>
@@ -82,7 +81,7 @@ namespace BasicRPGScreen.SpriteCode
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation, Vector2 location)
         {
             if (animation == 0) ActiveTexure = (textureIdle, idleFrames);
-            else if(animation == 1) ActiveTexure = (textureAttack, attackFrames);
+            else if (animation == 1) ActiveTexure = (textureAttack, attackFrames);
             else ActiveTexure = (textureDeath, deathFrames);
 
             position = location;
@@ -97,7 +96,7 @@ namespace BasicRPGScreen.SpriteCode
                 if (animationFrame > ActiveTexure.Item2) animationFrame = 0;
                 animationTimer -= 0.1;
             }
-            var source = new Rectangle(animationFrame * 48, 0, 48, 48);
+            var source = new Rectangle(animationFrame * 96, 0, 96, 96);
             SpriteEffects spriteEffects = flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             spriteBatch.Draw(ActiveTexure.Item1, position, source, Color, 0, new Vector2(24, 24), 2f, spriteEffects, 0);
         }

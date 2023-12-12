@@ -26,11 +26,14 @@ namespace BasicRPGScreen.Screens
         private TextBorder _textBorder;
         private Song backgroundMusic;
         private Tilemap _tilemap;
+        private Goblin _goblin;
+        private List<Enemy> _enemyList = new List<Enemy>();
+        private bool _isGoblinAlive = true;
 
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
 
-        public SecondEncounterGameplayScreen()
+        public SecondEncounterGameplayScreen(bool goblinAlive)
         {
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
@@ -44,8 +47,11 @@ namespace BasicRPGScreen.Screens
             {
 
             };
-            _door = new WoodenDoorSprite(new Vector2(1120, 280));
+            _door = new WoodenDoorSprite(new Vector2(620, 100));
             _textBorder = new TextBorder();
+            _goblin = new Goblin(new Vector2(620, 140));
+            _enemyList.Add(_goblin);
+            _isGoblinAlive = goblinAlive;
         }
 
         public override void Activate()
@@ -64,6 +70,7 @@ namespace BasicRPGScreen.Screens
             MediaPlayer.Volume = 0.1f;
             MediaPlayer.Play(backgroundMusic);
             _tilemap = _content.Load<Tilemap>("ThirdLevel");
+            _goblin.LoadContent(_content);
 
             //Thread.Sleep(500);
 
@@ -102,7 +109,8 @@ namespace BasicRPGScreen.Screens
                 }
                 if (_door.Bounds.CollidesWith(_playerKnight.Bounds))
                     if (Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
-                        ScreenManager.AddScreen(new FinalEncounterGameplayScreen(), ControllingPlayer);
+                        ScreenManager.AddScreen(new FinalEncounterGameplayScreen(true), ControllingPlayer);
+                if (_isGoblinAlive) if (_goblin.Bounds.CollidesWith(_playerKnight.Bounds)) ScreenManager.AddScreen(new BattleScreen(_enemyList, 1), ControllingPlayer);
             }
         }
 
@@ -149,6 +157,7 @@ namespace BasicRPGScreen.Screens
             }
             _door.Draw(gameTime, _spriteBatch);
             _playerKnight.Draw(gameTime, _spriteBatch);
+            if (_isGoblinAlive) _goblin.Draw(gameTime, _spriteBatch, 0, new Vector2(620, 140));
             _spriteBatch.End();
 
             if (TransitionPosition > 0 || _pauseAlpha > 0)

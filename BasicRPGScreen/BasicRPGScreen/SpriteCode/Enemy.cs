@@ -14,6 +14,6 @@ namespace BasicRPGScreen.SpriteCode
         public int CurrentHP;
         public int Damage;
 
-        public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation);
+        public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation, Vector2 location);
     }
 }

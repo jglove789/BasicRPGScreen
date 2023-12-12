@@ -29,6 +29,7 @@ namespace BasicRPGScreen.SpriteCode
         public int Speed;
 
         public int HealCount;
+        public bool Blocking = false;
 
         private GamePadState gamePadState;
 
