@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BasicRPGScreen</id>
+    <version>1.0.0</version>
+    <authors>BasicRPGScreen</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="11c2aa60b4b7eef762bf9baa1c9305439f1175bc" />
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="MonoGame.Content.Builder.Task" version="3.8.1.303" exclude="Build,Analyzers" />
+        <dependency id="MonoGame.Framework.WindowsDX" version="3.8.1.303" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/Attack1_Boss.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/Attack2_Boss.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/BattleScreen.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/blank.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/Death_Boss.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/FieldsTileset.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/FinalLevel.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/FirstLevel.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/gradient.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/Idle_Boss.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/LevelMusic2.wma" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/LevelMusic2.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/MenuItemSelectSound.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/MenuMoving.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/SecondLevel.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/SignSprite.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/sunnyspells.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/S_Attack_Goblin.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/S_Attack_Wolf.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/S_Death_Goblin.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/S_Death_Wolf.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/TextBox.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/ThirdLevel.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/WoodenDoor.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/_Attack.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/_Attack2.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/_Idle.xnb" buildAction="Content" />
+      <files include="any/net6.0-windows7.0/Content/bin/Windows/Content/_Run.xnb" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\BasicRPGScreen.runtimeconfig.json" target="lib\net6.0-windows7.0\BasicRPGScreen.runtimeconfig.json" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\BasicRPGScreen.dll" target="lib\net6.0-windows7.0\BasicRPGScreen.dll" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Attack1_Boss.xnb" target="content\Content\bin\Windows\Content\Attack1_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Attack1_Boss.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\Attack1_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Attack2_Boss.xnb" target="content\Content\bin\Windows\Content\Attack2_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Attack2_Boss.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\Attack2_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\BattleScreen.xnb" target="content\Content\bin\Windows\Content\BattleScreen.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\BattleScreen.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\BattleScreen.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\blank.xnb" target="content\Content\bin\Windows\Content\blank.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\blank.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\blank.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Death_Boss.xnb" target="content\Content\bin\Windows\Content\Death_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Death_Boss.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\Death_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FieldsTileset.xnb" target="content\Content\bin\Windows\Content\FieldsTileset.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FieldsTileset.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\FieldsTileset.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FinalLevel.xnb" target="content\Content\bin\Windows\Content\FinalLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FinalLevel.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\FinalLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FirstLevel.xnb" target="content\Content\bin\Windows\Content\FirstLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\FirstLevel.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\FirstLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\gradient.xnb" target="content\Content\bin\Windows\Content\gradient.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\gradient.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\gradient.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Idle_Boss.xnb" target="content\Content\bin\Windows\Content\Idle_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\Idle_Boss.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\Idle_Boss.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\LevelMusic2.wma" target="content\Content\bin\Windows\Content\LevelMusic2.wma" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\LevelMusic2.wma" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\LevelMusic2.wma" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\LevelMusic2.xnb" target="content\Content\bin\Windows\Content\LevelMusic2.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\LevelMusic2.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\LevelMusic2.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\MenuItemSelectSound.xnb" target="content\Content\bin\Windows\Content\MenuItemSelectSound.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\MenuItemSelectSound.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\MenuItemSelectSound.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\MenuMoving.xnb" target="content\Content\bin\Windows\Content\MenuMoving.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\MenuMoving.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\MenuMoving.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\SecondLevel.xnb" target="content\Content\bin\Windows\Content\SecondLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\SecondLevel.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\SecondLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\SignSprite.xnb" target="content\Content\bin\Windows\Content\SignSprite.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\SignSprite.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\SignSprite.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\sunnyspells.xnb" target="content\Content\bin\Windows\Content\sunnyspells.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\sunnyspells.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\sunnyspells.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Attack_Goblin.xnb" target="content\Content\bin\Windows\Content\S_Attack_Goblin.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Attack_Goblin.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\S_Attack_Goblin.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Attack_Wolf.xnb" target="content\Content\bin\Windows\Content\S_Attack_Wolf.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Attack_Wolf.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\S_Attack_Wolf.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Death_Goblin.xnb" target="content\Content\bin\Windows\Content\S_Death_Goblin.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Death_Goblin.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\S_Death_Goblin.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Death_Wolf.xnb" target="content\Content\bin\Windows\Content\S_Death_Wolf.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\S_Death_Wolf.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\S_Death_Wolf.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\TextBox.xnb" target="content\Content\bin\Windows\Content\TextBox.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\TextBox.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\TextBox.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\ThirdLevel.xnb" target="content\Content\bin\Windows\Content\ThirdLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\ThirdLevel.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\ThirdLevel.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\WoodenDoor.xnb" target="content\Content\bin\Windows\Content\WoodenDoor.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\WoodenDoor.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\WoodenDoor.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Attack.xnb" target="content\Content\bin\Windows\Content\_Attack.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Attack.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\_Attack.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Attack2.xnb" target="content\Content\bin\Windows\Content\_Attack2.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Attack2.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\_Attack2.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Idle.xnb" target="content\Content\bin\Windows\Content\_Idle.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Idle.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\_Idle.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Run.xnb" target="content\Content\bin\Windows\Content\_Run.xnb" />
+    <file src="C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\Content\bin\Windows\Content\_Run.xnb" target="contentFiles\any\net6.0-windows7.0\Content\bin\Windows\Content\_Run.xnb" />
+  </files>
+</package>

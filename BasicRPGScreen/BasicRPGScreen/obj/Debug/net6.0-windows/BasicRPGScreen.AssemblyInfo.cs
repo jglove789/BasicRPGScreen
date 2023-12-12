@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasicRPGScreen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+820ea7b79125183e3aa25e309e5ca21710584737")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11c2aa60b4b7eef762bf9baa1c9305439f1175bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasicRPGScreen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasicRPGScreen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
