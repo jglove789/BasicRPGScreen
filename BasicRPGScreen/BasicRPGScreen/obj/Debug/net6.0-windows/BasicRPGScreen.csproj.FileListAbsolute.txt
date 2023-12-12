@@ -105,3 +105,13 @@ C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\FinalLevel.xnb
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\ThirdLevel.xnb
 C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\BattleScreen.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\Attack1_Boss.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\Attack2_Boss.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\Death_Boss.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\Idle_Boss.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\S_Attack_Goblin.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\S_Attack_Wolf.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\S_Death_Goblin.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\S_Death_Wolf.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Attack.xnb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\BasicRPGScreen\bin\Debug\net6.0-windows\Content\_Attack2.xnb

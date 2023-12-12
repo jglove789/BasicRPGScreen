@@ -29,6 +29,7 @@ namespace BasicRPGScreen.Screens
         private TextBorder _textBorder;
         private Song backgroundMusic;
         private Tilemap _tilemap;
+        private PlayerStats _stats;
 
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
@@ -48,6 +49,7 @@ namespace BasicRPGScreen.Screens
             _graphics.ApplyChanges();*/
 
             // TODO: Add your initialization logic here
+            //var stats = ScreenManager.GetStats();
             _playerKnight = new PlayerKnight();
             _signSprites = new SignSprite[]
             {
@@ -80,6 +82,8 @@ namespace BasicRPGScreen.Screens
             Thread.Sleep(500);
 
             ScreenManager.Game.ResetElapsedTime();
+            _stats = this.ScreenManager.GetStats();
+            _playerKnight.LoadStats(_stats);
         }
 
         public override void Deactivate()
@@ -114,7 +118,7 @@ namespace BasicRPGScreen.Screens
                 }
                 if (_door.Bounds.CollidesWith(_playerKnight.Bounds))
                     if (Keyboard.GetState().IsKeyDown(Keys.Space) || GamePad.GetState(0).IsButtonDown(Buttons.A))
-                        ScreenManager.AddScreen(new FirstEncounterGameplayScreen(), ControllingPlayer);
+                        ScreenManager.AddScreen(new FirstEncounterGameplayScreen(true), ControllingPlayer);
             }
         }
 

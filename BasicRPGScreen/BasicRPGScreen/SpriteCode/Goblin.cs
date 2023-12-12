@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BasicRPGScreen.SpriteCode
 {
-    public class Goblin
+    public class Goblin : Enemy
     {
         private Texture2D textureIdle;
 
@@ -64,7 +64,7 @@ namespace BasicRPGScreen.SpriteCode
         /// </summary>
         /// <param name="gameTime">The game time</param>
         /// <param name="spriteBatch">The spritebatch to render with</param>
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, int animation)
         {
             //Update animation timer
             animationTimer += gameTime.ElapsedGameTime.TotalSeconds;

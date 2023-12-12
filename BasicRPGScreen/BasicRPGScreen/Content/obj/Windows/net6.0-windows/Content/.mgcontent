@@ -4,17 +4,27 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Attack.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Attack2.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Idle.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/_Run.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/Attack1_Boss.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/Attack2_Boss.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/BattleScreen.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/blank.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/Death_Boss.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FieldsTileset.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FinalLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/FirstLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/gradient.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/Idle_Boss.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/LevelMusic2.mp3</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuItemSelectSound.wav</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/MenuMoving.wav</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/S_Attack_Goblin.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/S_Attack_Wolf.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/S_Death_Goblin.png</File>
+    <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/S_Death_Wolf.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SecondLevel.txt</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/SignSprite.png</File>
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/sunnyspells.spritefont</File>
@@ -23,6 +33,16 @@
     <File>C:/Users/bearf/Documents/GitHub/BasicRPGScreen/BasicRPGScreen/BasicRPGScreen/Content/WoodenDoor.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

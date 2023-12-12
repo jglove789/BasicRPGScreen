@@ -72,13 +72,30 @@ namespace BasicRPGScreen.StateManagement
         /// </summary>
         protected override void LoadContent()
         {
+            //Code to initialize player stats, will implement new/load game system
             _pStats = new PlayerStats()
             {
-                Name = "Knight"
+                Name = "Knight",
+                Level = 1,
+                Experience = 0,
+
+                MaxHP = 50,
+                CurrentHP = 50,
+
+                Strength = 10,
+                Agility = 5,
+                Magic = 1,
+                PhysicalDefense = 10,
+                MagicalDefense = 5,
+                Speed = 4,
+
+                HealCount = 3
             };
-            //Save(_pStats);
+            Save(_pStats);
+            //_pStats = new PlayerStats();
             _pStats = Load();
             Trace.WriteLine($"{_pStats.Name}");
+
             SpriteBatch = new SpriteBatch(GraphicsDevice);
             Font = _content.Load<SpriteFont>("sunnyspells");
             BlankTexture = _content.Load<Texture2D>("blank");
@@ -224,6 +241,11 @@ namespace BasicRPGScreen.StateManagement
         {
             var fileContents = File.ReadAllText(PATH);
             return JsonSerializer.Deserialize<PlayerStats>(fileContents);
+        }
+
+        public PlayerStats GetStats()
+        {
+            return _pStats;
         }
     }
 }

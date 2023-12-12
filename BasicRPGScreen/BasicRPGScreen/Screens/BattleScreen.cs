@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.TimeZoneInfo;
+using System.Threading;
 
 namespace BasicRPGScreen.Screens
 {
@@ -23,9 +24,14 @@ namespace BasicRPGScreen.Screens
         private TextBorder _textBorder;
         private Song backgroundMusic;
         private Tilemap _tilemap;
+        private PlayerStats _stats;
 
         private float _pauseAlpha;
         private readonly InputAction _pauseAction;
+        private KeyboardState _currentKeyboardState;
+        private KeyboardState _previousKeyboardState;
+
+        private List<Enemy> _enemyList = new();
 
         //Who's turn is it?
         private int _activeEntity;
@@ -33,8 +39,9 @@ namespace BasicRPGScreen.Screens
         private bool _animationPlaying = false;
         private bool _battleOver = false;
         private bool _battleWonOrLost = true;
+        private int _encounter;
 
-        public BattleScreen()
+        public BattleScreen(List<Enemy> enemies, int encounterScreen)
         {
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
@@ -44,8 +51,10 @@ namespace BasicRPGScreen.Screens
                 new[] { Keys.Back, Keys.Escape }, true);
 
             _playerKnight = new PlayerKnight();
+            _enemyList = enemies;
             _textBorder = new TextBorder();
             _turnCount = 1;
+            _encounter = encounterScreen;
         }
 
         public override void Activate()
@@ -66,6 +75,8 @@ namespace BasicRPGScreen.Screens
             //Thread.Sleep(500);
 
             ScreenManager.Game.ResetElapsedTime();
+            _stats = this.ScreenManager.GetStats();
+            _playerKnight.LoadStats(_stats);
         }
 
         public override void Deactivate()
@@ -88,35 +99,54 @@ namespace BasicRPGScreen.Screens
             else
                 _pauseAlpha = Math.Max(_pauseAlpha - 1f / 32, 0);
 
+            _previousKeyboardState = _currentKeyboardState;
+            _currentKeyboardState = Keyboard.GetState();
+
             if(_activeEntity == 0) //Player turn
             {
-                if(Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                if((_currentKeyboardState.IsKeyDown(Keys.Z) && _previousKeyboardState.IsKeyUp(Keys.Z)) || GamePad.GetState(0).IsButtonDown(Buttons.A))
                 {
                     //Attack enemy
+                    int damage = _playerKnight.Strength;
+                    _enemyList[0].CurrentHP -= damage;
+                    if (_enemyList[0].CurrentHP < 0) _enemyList.RemoveAt(0);
                     _activeEntity = 1;
                 }
-                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                else if ((_currentKeyboardState.IsKeyDown(Keys.X) && _previousKeyboardState.IsKeyUp(Keys.X)) || GamePad.GetState(0).IsButtonDown(Buttons.X))
                 {
                     //Attack enemy with special
                     _activeEntity = 1;
                 }
-                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                else if ((_currentKeyboardState.IsKeyDown(Keys.C) && _previousKeyboardState.IsKeyUp(Keys.C)) || GamePad.GetState(0).IsButtonDown(Buttons.B))
                 {
                     //Block
                     _activeEntity = 1;
                 }
-                else if (Keyboard.GetState().IsKeyDown(Keys.A) || GamePad.GetState(0).IsButtonDown(Buttons.A))
+                else if ((_currentKeyboardState.IsKeyDown(Keys.V) && _previousKeyboardState.IsKeyUp(Keys.V)) || GamePad.GetState(0).IsButtonDown(Buttons.Y))
                 {
                     //Use healing charge
+                    _playerKnight.CurrentHP += _playerKnight.MaxHP / 2;
+                    _playerKnight.HealCount -= 1;
                     _activeEntity = 1;
                 }
             }
             else //Enemy turn
             {
                 //Always attacks player
-                _activeEntity = 0;
                 _turnCount++;
                 _animationPlaying = true;
+                
+                if(_enemyList.Count > 0)
+                {
+                    int damage = _enemyList[_activeEntity - 1].Damage;
+                    /*if not blocking*/
+                    _playerKnight.CurrentHP -= damage;
+                }
+
+                if(_enemyList.Count == _activeEntity)
+                {
+                    _activeEntity = 0;
+                }
             }
 
             //Not sure if this statement will be necessary during combat
@@ -159,6 +189,44 @@ namespace BasicRPGScreen.Screens
             _spriteBatch.Begin();
             _tilemap.Draw(gameTime, _spriteBatch);
             _playerKnight.Draw(gameTime, _spriteBatch);
+            _spriteBatch.DrawString(_spriteFont, "HP: " + _playerKnight.CurrentHP + "/" + _playerKnight.MaxHP, new Vector2(240, 500), Color.White, 0, new Vector2(), 2f, SpriteEffects.None, 0);
+            _spriteBatch.DrawString(_spriteFont, "HP: " + _playerKnight.CurrentHP + "/" + _playerKnight.MaxHP, new Vector2(240, 500), Color.White, 0, new Vector2(), 2f, SpriteEffects.None, 0);
+
+            if(_enemyList.Count > 0)
+            {
+                foreach (var enemy in _enemyList)
+                {
+                    enemy.Draw(gameTime, _spriteBatch, 0);
+                }
+            }
+            else
+            {
+                _spriteBatch.DrawString(_spriteFont, "You Win!", new Vector2(560, 200), Color.Green, 0, new Vector2(), 2f, SpriteEffects.None, 0);
+                ExitScreen();
+                //Thread.Sleep(2000);
+                //if (_encounter == 1) ScreenManager.AddScreen(new FirstEncounterGameplayScreen(false), ControllingPlayer);
+            }
+
+            if (_playerKnight.CurrentHP < 0)
+            {
+                _spriteBatch.DrawString(_spriteFont, "You Win!", new Vector2(560, 200), Color.Green, 0, new Vector2(), 2f, SpriteEffects.None, 0);
+                Thread.Sleep(2000);
+                LoadingScreen.Load(ScreenManager, false, null, new MainMenuScreen());
+            }
+
+            if (_activeEntity == 0)
+            {
+                //draw menu options
+                _spriteBatch.DrawString(_spriteFont, "Attack\nPress Z/A", new Vector2(240, 600), Color.Green, 0, new Vector2(), 0.5f, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(_spriteFont, "Special\nPress X/X", new Vector2(320, 600), Color.Blue, 0, new Vector2(), 0.5f, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(_spriteFont, "Block\nPress C/B", new Vector2(400, 600), Color.Red, 0, new Vector2(), 0.5f, SpriteEffects.None, 0);
+                _spriteBatch.DrawString(_spriteFont, "Heal: " + _playerKnight.HealCount + " Charges Left\nPress V/Y", new Vector2(480, 600), Color.Yellow, 0, new Vector2(), 0.5f, SpriteEffects.None, 0);
+            }
+            else
+            {
+                //draw enemy attack
+            }
+
             _spriteBatch.End();
 
             if (TransitionPosition > 0 || _pauseAlpha > 0)

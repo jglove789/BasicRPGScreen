@@ -8,11 +8,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
+using BasicRPGScreen.StateManagement;
 
 namespace BasicRPGScreen.SpriteCode
 {
     public class PlayerKnight
     {
+        public int Level;
+        public int Experience;
+
+        public int MaxHP;
+        public int CurrentHP;
+
+        public int Strength;
+        public int Agility;
+        public int Magic;
+        public int PhysicalDefense;
+        public int MagicalDefense;
+        public int Speed;
+
+        public int HealCount;
+
         private GamePadState gamePadState;
 
         private KeyboardState keyboardState;
@@ -119,6 +136,21 @@ namespace BasicRPGScreen.SpriteCode
             {
                 spriteBatch.Draw(textureIdle, position, source, Color, 0, new Vector2(64, 64), 2f, spriteEffects, 0);
             }
+        }
+
+        public void LoadStats(PlayerStats stats)
+        {
+            Level = stats.Level;
+            Experience = stats.Experience;
+            MaxHP = stats.MaxHP;
+            CurrentHP = stats.CurrentHP;
+            Strength = stats.Strength;
+            Agility = stats.Agility;
+            Magic = stats.Magic;
+            PhysicalDefense = stats.PhysicalDefense;
+            MagicalDefense = stats.MagicalDefense;
+            Speed = stats.Speed;
+            HealCount = stats.HealCount;
         }
     }
 }

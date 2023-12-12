@@ -10,3 +10,16 @@ C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\De
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\refint\TilemapPipeline.dll
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.pdb
 C:\Users\bearf\source\repos\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\ref\TilemapPipeline.dll
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\bin\Debug\net6.0\TilemapPipeline.deps.json
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\bin\Debug\net6.0\TilemapPipeline.dll
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\bin\Debug\net6.0\TilemapPipeline.pdb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.csproj.AssemblyReference.cache
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.AssemblyInfoInputs.cache
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.AssemblyInfo.cs
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.csproj.CoreCompileInputs.cache
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.sourcelink.json
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.dll
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\refint\TilemapPipeline.dll
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\TilemapPipeline.pdb
+C:\Users\bearf\Documents\GitHub\BasicRPGScreen\BasicRPGScreen\TilemapPipeline\obj\Debug\net6.0\ref\TilemapPipeline.dll
